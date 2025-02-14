@@ -9,7 +9,7 @@ const CategoryBanner = ({categoryInfo}) => {
             {categoryInfo.map(info => (
                 <div key={info.id}>
                     <div className='banner-left'>
-                        <img src={`http://localhost:8000${info.image}`} className='banner-image' alt='category'/>
+                        <img src={`${info.image}`} className='banner-image' alt='category'/>
                     </div>
                     <div className='banner-right'>
                         <p className='banner-heading'> {info.name} </p>

@@ -16,7 +16,7 @@ const FoodItem = ({food, cartItems, addToCart, removeFromCart, disableBtn}) => {
             </div>
 
             <div className='item-right'>
-                <img src={`http://localhost:8000${food.image}`} alt='Food' height="150px" className='item-image'/> 
+                <img src={`${food.image}`} alt='Food' height="150px" className='item-image'/> 
             
                 {cartItems.find(cart => cart.food.id === food.id) 
                 // If food is already added in cart, then display buttons to increase/decrease the quantity 

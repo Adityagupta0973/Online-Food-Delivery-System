@@ -74,7 +74,7 @@ const ManageFoodItems = () => {
                                             <p className='item-price'> Rs. {food.price} </p>
                                         </div>
                                         <div className='item-right'>
-                                            <img src={`http://localhost:8000${food.image}`} alt='Food' height="150px" className='item-image'/>
+                                            <img src={`${food.image}`} alt='Food' height="150px" className='item-image'/>
                                         </div>
                                     </Link>
                                 </div>    
