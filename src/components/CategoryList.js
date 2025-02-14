@@ -7,6 +7,7 @@ import './CategoryList.css'
 
 const CategoryList = ({category}) => {
     
+    console.log(category.image);
 
     return (
         <Link to={`/category/${category.id}`} key={category.id} className='category-list-column'>
