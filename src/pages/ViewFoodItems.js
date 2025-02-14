@@ -32,7 +32,7 @@ const ViewFoodItems = () => {
     // To fetch the food items of a category
     let getFoodItems = async () => {
       setLoading(true);
-      let response = await fetch(`http://127.0.0.1:8000/api/category/${categoryId}`, {
+      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/category/${categoryId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const ViewFoodItems = () => {
 
     // To fetch the info of the requested category (like name, address)
     let getCategoryInfo = async () => {
-      let response = await fetch(`http://127.0.0.1:8000/api/category/info/${categoryId}`, {
+      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/category/info/${categoryId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const ViewFoodItems = () => {
 
     // To get the cart items of the logged in user
     let getCartItems = async () => {
-      let response = await fetch(`http://127.0.0.1:8000/api/get-cart-items/`, {
+      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-cart-items/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ const ViewFoodItems = () => {
     // Disable add to cart btn till the API returns a response
     setDisableBtn(true)
 
-    let response = await fetch(`http://127.0.0.1:8000/api/add-to-cart/${food.id}`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/add-to-cart/${food.id}`, {
         method:'POST',
         headers:{
             'Content-Type':'application/json',
@@ -140,7 +140,7 @@ const ViewFoodItems = () => {
     // Disable remove from cart btn, till the API returns a response
     setDisableBtn(true)
 
-    let response = await fetch(`http://127.0.0.1:8000/api/remove-from-cart/${food.id}`, {
+    let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/remove-from-cart/${food.id}`, {
         method:'POST',
         headers:{
             'Content-Type':'application/json',

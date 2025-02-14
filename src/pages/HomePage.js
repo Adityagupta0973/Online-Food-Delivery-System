@@ -18,7 +18,7 @@ const HomePage = () => {
     useEffect(()=> {
         // To fetch all the Category
         let getCategory = async() =>{
-            let response = await fetch(`http://127.0.0.1:8000/api/category/`, {
+            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/category/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',

@@ -18,7 +18,7 @@ const CategoryAccountSetup = () => {
         
         // To get the stripe account info of category
         let getAccountInfo = async() =>{
-            let response = await fetch(`http://127.0.0.1:8000/partner-with-us/create-stripe-account/get-details/`, {
+            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/create-stripe-account/get-details/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -51,7 +51,7 @@ const CategoryAccountSetup = () => {
     // To create a stripe account for the category
     let createStripeAccount = async() =>{
         setDisabled(true)
-        let response = await fetch(`http://127.0.0.1:8000/partner-with-us/create-stripe-account/`, {
+        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/create-stripe-account/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -81,7 +81,7 @@ const CategoryAccountSetup = () => {
     // To complete the stripe onboarding process (for those who have not completed the process, but have just created the account)
     let completeStripeAccount = async() =>{
         setDisabled(true)
-        let response = await fetch(`http://127.0.0.1:8000/partner-with-us/complete-stripe-account/`, {
+        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/complete-stripe-account/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',

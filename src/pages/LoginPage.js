@@ -41,7 +41,7 @@ const LoginPage = () => {
         setLoading(true)
 
         // Make a post request to the API with the mobile number.
-        let response = await fetch(`http://127.0.0.1:8000/api/mobile-send-message/`, {
+        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/mobile-send-message/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

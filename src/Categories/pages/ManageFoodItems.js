@@ -19,7 +19,7 @@ const ManageFoodItems = () => {
         // To fetch the food items of category
         let getFoodItems = async() =>{
             setLoading(true)
-            let response = await fetch(`http://127.0.0.1:8000/partner-with-us/manage-food-items/`, {
+            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/manage-food-items/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
