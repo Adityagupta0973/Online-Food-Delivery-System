@@ -9,7 +9,7 @@ const CategoryBanner = ({categoryInfo}) => {
             {categoryInfo.map(info => (
                 <div key={info.id}>
                     <div className='banner-left'>
-                        <img src={`${info.image}`} className='banner-image' alt='category'/>
+                        <img src={`${process.env.REACT_APP_API_URL}${info.image}`} className='banner-image' alt='category'/>
                     </div>
                     <div className='banner-right'>
                         <p className='banner-heading'> {info.name} </p>

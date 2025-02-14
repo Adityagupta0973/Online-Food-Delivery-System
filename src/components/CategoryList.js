@@ -11,7 +11,7 @@ const CategoryList = ({category}) => {
     return (
         <Link to={`/category/${category.id}`} key={category.id} className='category-list-column'>
             <div key={category.id} >
-                <img src={`${category.image}`} alt='Food' height="150px" className='category-image'/>
+                <img src={`${process.env.REACT_APP_API_URL}${category.image}`} alt='Food' height="150px" className='category-image'/>
                 <p className='category-heading'> {category.name} </p>
                 <p className='category-address'> {category.address} </p>
             </div>
