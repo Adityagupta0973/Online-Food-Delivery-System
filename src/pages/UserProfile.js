@@ -17,7 +17,7 @@ const UserProfile = () => {
         
         // To get the cart items of the logged in user (all the food items added to the user's cart)
         let getUserInfo = async() =>{
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-user-info/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/api/get-user-info/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -36,7 +36,7 @@ const UserProfile = () => {
 
          // To get the cart items of the logged in user (all the food items added to the user's cart)
          let getOrders = async() =>{
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-orders/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/api/get-orders/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',

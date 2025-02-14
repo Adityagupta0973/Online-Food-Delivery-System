@@ -12,7 +12,7 @@ const StripeReturnUrlPage = () => {
     useEffect(() => {
         // To get the stripe return url
         let getStripeReturnURL = async() =>{
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/create-stripe-account/return-url/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/create-stripe-account/return-url/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',

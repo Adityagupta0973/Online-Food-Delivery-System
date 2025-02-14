@@ -27,7 +27,7 @@ export const CategoryAuthProvider = ({children}) => {
         setFormLoading(true)
 
         // Make a post request to the api with the Category's credentials.
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/api/token/`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/api/token/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -83,7 +83,7 @@ export const CategoryAuthProvider = ({children}) => {
         form_data.append('name', e.target.name.value);
         form_data.append('address', e.target.address.value);
 
-        let url = `${process.env.REACT_APP_BACKEND_URL}/partner-with-us/register/`;
+        let url = `${process.env.REACT_APP_API_URL}/partner-with-us/register/`;
         await axios.post(url, form_data, {
             headers: {
                 'content-type': 'multipart/form-data'
@@ -109,7 +109,7 @@ export const CategoryAuthProvider = ({children}) => {
         form_data.append('description', e.target.description.value);
         form_data.append('price', e.target.price.value);
 
-        let url = `${process.env.REACT_APP_BACKEND_URL}/partner-with-us/add-food-item/`;
+        let url = `${process.env.REACT_APP_API_URL}/partner-with-us/add-food-item/`;
         await axios.post(url, form_data, {
         headers: {
             'content-type': 'multipart/form-data',
@@ -137,7 +137,7 @@ export const CategoryAuthProvider = ({children}) => {
         form_data.append('description', e.target.description.value);
         form_data.append('price', e.target.price.value);
         
-        let url = `${process.env.REACT_APP_BACKEND_URL}/partner-with-us/manage-food-items/${e.target.id.value}/update`;
+        let url = `${process.env.REACT_APP_API_URL}/partner-with-us/manage-food-items/${e.target.id.value}/update`;
         await axios.post(url, form_data, {
         headers: {
             'content-type': 'multipart/form-data',
@@ -157,7 +157,7 @@ export const CategoryAuthProvider = ({children}) => {
         e.preventDefault()
         setFormLoading(true)
 
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/manage-food-items/${e.target.value}/delete`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/manage-food-items/${e.target.value}/delete`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'multipart/form-data',
@@ -196,7 +196,7 @@ export const CategoryAuthProvider = ({children}) => {
                 return
             }
             // Make a post request to the api with the refresh token to update the access token
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/api/token/refresh/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/api/token/refresh/`, {
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'

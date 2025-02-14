@@ -11,7 +11,7 @@ const StripeRefreshUrlPage = () => {
         
         // To get the stripe refresh url
         let getStripeRefreshURL = async() =>{
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/create-stripe-account/refresh-url/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/create-stripe-account/refresh-url/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',

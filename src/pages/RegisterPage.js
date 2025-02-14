@@ -40,7 +40,7 @@ const RegisterPage = () => {
         setPhoneNo(e.target.number.value)
 
         // Make a POST request to the API with the mobile number.
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/mobile-send-message/`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/api/mobile-send-message/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -69,7 +69,7 @@ const RegisterPage = () => {
         setPhoneNo(e.target.number.value)
 
         // Make a POST request to API api with the mobile number.
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/mobile-verification/`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/api/mobile-verification/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'

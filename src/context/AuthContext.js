@@ -30,7 +30,7 @@ export const AuthProvider = ({children}) => {
         // To submit the twilio's SMS verification code
 
         // Make a post request to the api with the mobile number.
-        let twilioResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/mobile-verification/`, {
+        let twilioResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/mobile-verification/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -51,7 +51,7 @@ export const AuthProvider = ({children}) => {
         else{
 
             // Make a post request to the api with the user's credentials.
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/custom-login/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/api/custom-login/`, {
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'
@@ -98,7 +98,7 @@ export const AuthProvider = ({children}) => {
         setFormLoading(true)
 
         // Make a post request to the api with the user's credentials.
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/token/`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/api/token/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -148,7 +148,7 @@ export const AuthProvider = ({children}) => {
         setFormLoading(true)
 
         // Make a post request to the api with the user's credentials.
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/register/`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/api/register/`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -197,7 +197,7 @@ export const AuthProvider = ({children}) => {
                 return
             }
             // Make a post request to the api with the refresh token to update the access token
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/token/refresh/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/api/token/refresh/`, {
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json'

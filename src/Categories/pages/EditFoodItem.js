@@ -16,7 +16,7 @@ const EditFoodItem = ({match}) => {
 
         // API Route to update food based on the ID
         let getFood = async () => {
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/manage-food-items/${foodId}`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/manage-food-items/${foodId}`, {
                 method: 'GET',
                 headers:{
                     'Content-Type':'application/json',

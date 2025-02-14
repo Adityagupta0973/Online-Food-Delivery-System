@@ -30,7 +30,7 @@ const ManageOrders = () => {
          // To get the cart items of the logged in user (all the food items added to the user's cart)
          let getOrders = async() =>{
             setLoading(true)
-            let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/get-orders/`, {
+            let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/get-orders/`, {
                 method:'GET',
                 headers:{
                     'Content-Type':'application/json',
@@ -57,7 +57,7 @@ const ManageOrders = () => {
     // To place an order
     let updateOrder = async(id) =>{
         setLoading(true)
-        let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/partner-with-us/update-order-status/${id}`, {
+        let response = await fetch(`${process.env.REACT_APP_API_URL}/partner-with-us/update-order-status/${id}`, {
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
